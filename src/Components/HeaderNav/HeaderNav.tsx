@@ -16,7 +16,7 @@ const HeaderNav = ({ links }: HeaderNavProps) => {
   const { classes, cx } = useStyles();
 
   return (
-    <Header height={56} mb={120}>
+    <Header height={56}>
       <Container className={classes.inner}>
         <Burger
           opened={opened}
@@ -25,7 +25,7 @@ const HeaderNav = ({ links }: HeaderNavProps) => {
           className={classes.burger}
         />
 
-        <Group className={classes.links} spacing={5}>
+        <Group className={classes.links} spacing={10}>
           {links.map((link, idx) => (
             <a
               key={idx}
