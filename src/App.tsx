@@ -1,45 +1,38 @@
-import {
-  ColorScheme,
-  ColorSchemeProvider,
-  MantineProvider,
-} from "@mantine/core";
-import Header from "./Components/HeaderNav/HeaderNav";
-import { useHotkeys, useLocalStorage } from "@mantine/hooks";
+import { MantineProvider } from "@mantine/core";
+
 import Hero from "./Components/Hero/Hero";
-import { About } from "./Components/About/About";
+import About from "./Components/About/About";
+import Projects from "./Components/Projects/Projects";
+import Contact from "./Components/Contact/Contact";
+import Footer from "./Components/Footer/Footer";
+
+import { scrollToAbout, scrollToProjects } from "./hooks/hooks";
 
 function App() {
-  const [colorScheme, setColorScheme] = useLocalStorage<ColorScheme>({
-    key: "mantine-color-scheme",
-    defaultValue: "dark",
-    getInitialValueInEffect: true,
-  });
+  const { targetRef: aboutMeRef, scrollIntoView: scrollAboutMeIntoView } =
+    scrollToAbout();
 
-  const toggleColorScheme = (value?: ColorScheme) =>
-    setColorScheme(value || (colorScheme === "dark" ? "light" : "dark"));
+  const { targetRef: projectRef, scrollIntoView: scrollProjectsIntoView } =
+    scrollToProjects();
 
-  useHotkeys([["mod+J", () => toggleColorScheme()]]);
-
+  const openInNewTab = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   return (
-    <ColorSchemeProvider
-      colorScheme={colorScheme}
-      toggleColorScheme={toggleColorScheme}
+    <MantineProvider
+      theme={{ colorScheme: "dark" }}
+      withGlobalStyles
+      withNormalizeCSS
     >
-      <MantineProvider
-        theme={{ colorScheme }}
-        withGlobalStyles
-        withNormalizeCSS
-      >
-        <Header
-          links={[
-            { label: "Projects", link: "#" },
-            { label: "Resume", link: "#" },
-          ]}
-        />
-        <Hero />
-        <About />
-      </MantineProvider>
-    </ColorSchemeProvider>
+      <Hero
+        scrollAboutMeIntoView={scrollAboutMeIntoView}
+        scrollProjectsIntoView={scrollProjectsIntoView}
+      />
+      <About aboutMeRef={aboutMeRef} openInNewTab={openInNewTab} />
+      <Projects projectRef={projectRef} openInNewTab={openInNewTab} />
+      <Contact />
+      <Footer openInNewTab={openInNewTab} />
+    </MantineProvider>
   );
 }
 

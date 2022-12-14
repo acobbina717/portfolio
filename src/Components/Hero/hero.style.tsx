@@ -3,12 +3,11 @@ import { createStyles } from "@mantine/core";
 export const useStyles = createStyles((theme) => ({
   wrapper: {
     position: "relative",
-    paddingTop: 200,
-    paddingBottom: 450,
-    backgroundPosition: "center",
+    paddingTop: 250,
+    marginBottom: 250,
     "@media (max-width: 520px)": {
-      paddingTop: 80,
-      paddingBottom: 50,
+      paddingTop: 110,
+      marginBottom: 160,
     },
   },
 
@@ -24,7 +23,7 @@ export const useStyles = createStyles((theme) => ({
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
     color: theme.white,
-    marginBottom: theme.spacing.xs,
+    marginBottom: theme.spacing.lg,
     textAlign: "center",
     fontFamily: `Greycliff CF, ${theme.fontFamily}`,
 
@@ -36,6 +35,7 @@ export const useStyles = createStyles((theme) => ({
 
   highlight: {
     color: theme.colors[theme.primaryColor][4],
+    fontSize: 60,
   },
 
   description: {
@@ -63,14 +63,15 @@ export const useStyles = createStyles((theme) => ({
   control: {
     height: 42,
     fontSize: theme.fontSizes.md,
+    marginTop: 27,
 
     "&:not(:first-of-type)": {
-      marginLeft: theme.spacing.md,
+      marginLeft: theme.spacing.xl,
     },
 
     "@media (max-width: 520px)": {
       "&:not(:first-of-type)": {
-        marginTop: theme.spacing.md,
+        marginTop: theme.spacing.xl,
         marginLeft: 0,
       },
     },

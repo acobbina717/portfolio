@@ -1,32 +1,66 @@
-import { Text, Title, TextInput, Button, Image } from "@mantine/core";
+import { Text, Title, Button, Image, ScrollArea } from "@mantine/core";
+import { MutableRefObject } from "react";
+
 import { useStyles } from "./about.styles";
 
-export function About() {
-  const { classes } = useStyles();
-  return (
-    <div className={classes.wrapper}>
-      <Image
-        radius="lg"
-        pl="65px"
-        ml={"65px"}
-        height={260}
-        src={"https://i.ibb.co/Kq08sDK/C-C-SKY07623.jpg"}
-        className={classes.image}
-      />
-      <div className={classes.body}>
-        <Title className={classes.title}>About Me...</Title>
-        <Text weight={500} size="lg" mb={5}>
-          Subscribe to our newsletter!
-        </Text>
-        <Text size="sm" color="dimmed">
-          You will never miss important product updates, latest news and
-          community QA sessions. Our newsletter is once a week, every Sunday.
-        </Text>
+import { Link } from "react-router-dom";
 
-        <div className={classes.controls}>
-          <Button className={classes.control}>View Resume</Button>
+interface AboutMeProps {
+  aboutMeRef?: MutableRefObject<HTMLDivElement>;
+  openInNewTab: (url: string) => void;
+}
+
+const About = ({ aboutMeRef, openInNewTab }: AboutMeProps) => {
+  const { classes } = useStyles();
+
+  return (
+    <div className={classes.wrapper} ref={aboutMeRef}>
+      <Title className={classes.title}>About Me</Title>
+
+      <div className={classes.content}>
+        <Image
+          radius="lg"
+          ml="-1.5%"
+          pl="50px"
+          height={290}
+          src={"/src/assets/images/SKY07623.JPG"}
+          className={classes.image}
+        />
+
+        <div className={classes.body}>
+          <ScrollArea
+            style={{ height: 255 }}
+            type="hover"
+            scrollbarSize={2}
+            scrollHideDelay={73}
+          >
+            <Text size="lg" color="dimmed">
+              I have a background in the Music Industry as an Audio Engineer.
+              Helping artist turn song ideas into radio ready records. I had an
+              idea to build a website to extend my audio engineering services
+              and that idea lead me down the rabbit-hole of Web Development.
+              After learning a few technologies on my own, I attened and
+              graduated from Flatiron School. Lorem ipsum, dolor sit amet
+              consectetur adipisicing elit. Odio odit ipsam voluptate, maxime at
+              cupiditate ut consequatur aliquid, quo culpa quae, delectus
+              quibusdam eveniet dolor atque doloremque natus ullam praesentium.
+            </Text>
+          </ScrollArea>
         </div>
+      </div>
+
+      <div className={classes.controls}>
+        <Link
+          to="/src/assets/Software Fullstack Engineer Developer Resume.docx.pdf"
+          target="_blank"
+        >
+          <Button size={"md"} className={classes.control}>
+            View Resume
+          </Button>
+        </Link>
       </div>
     </div>
   );
-}
+};
+
+export default About;
