@@ -36,14 +36,15 @@ const About = ({ aboutMeRef, openInNewTab }: AboutMeProps) => {
           >
             <Text size="lg" color="dimmed">
               I have a background in the Music Industry as an Audio Engineer.
-              Helping artist turn song ideas into radio ready records. I had an
-              idea to build a website to extend my audio engineering services
-              and that idea lead me down the rabbit-hole of Web Development.
-              After learning a few technologies on my own, I attened and
-              graduated from Flatiron School. Lorem ipsum, dolor sit amet
-              consectetur adipisicing elit. Odio odit ipsam voluptate, maxime at
-              cupiditate ut consequatur aliquid, quo culpa quae, delectus
-              quibusdam eveniet dolor atque doloremque natus ullam praesentium.
+              Helping artist turn song ideas into radio ready records. In 2019
+              had an idea to build a website to extend my audio engineering
+              services and that idea lead me down the rabbit-hole of Web
+              Development. YouTube and Udemy started to consume most of my days.
+              Theres so many technologies to cover. After learning a few
+              technologies like HTML, CSS, Javascriprt on my own, I attened and
+              graduated from Flatiron School. Ever since graduation I've
+              continued to learn new technologies and stregthen my development
+              skills.
             </Text>
           </ScrollArea>
         </div>
