@@ -25,7 +25,7 @@ const mockdata = [
   {
     title: "iChat App",
     description:
-      "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
+      "Sign-in/sign-up and start a group chat with your firends or chat with them directly ",
 
     image: "https://i.ibb.co/J7h9M8G/day70-designer-fav-tool-wacom.png",
     sourceCode: "https://github.com/acobbina717/iChat-App",
@@ -33,7 +33,7 @@ const mockdata = [
   {
     title: "Screeen Sharing App",
     description:
-      "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
+      "Gives the user the ability to browse a webpage through my website and feel like it's a real browser.",
 
     image: "https://i.ibb.co/ZmTFgVh/day9-toolbox.png",
   },
