@@ -51,14 +51,15 @@ const About = ({ aboutMeRef, openInNewTab }: AboutMeProps) => {
       </div>
 
       <div className={classes.controls}>
-        <Link
-          to="/src/assets/Software Fullstack Engineer Developer Resume.docx.pdf"
-          target="_blank"
+        <Button
+          onClick={() =>
+            openInNewTab("https://publuu.com/flip-book/64296/187089")
+          }
+          size={"md"}
+          className={classes.control}
         >
-          <Button size={"md"} className={classes.control}>
-            View Resume
-          </Button>
-        </Link>
+          View Resume
+        </Button>
       </div>
     </div>
   );
