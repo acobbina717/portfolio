@@ -18,7 +18,7 @@ const mockdata = [
     description:
       "E-commerce app where you can sign-/sign-in with email or google, browse through differnt categories of products to add to cart. Update cart quantity and remove any items before checking out with Stripe",
 
-    image: "/src/assets/images/day30-cafe.png",
+    image: "/assets/images/day30-cafe.png",
     sourceCode: "https://github.com/acobbina717/ShoppingApp",
     liveDemo: "https://lucky-kringle-a2c598.netlify.app/",
   },
