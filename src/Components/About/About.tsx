@@ -23,7 +23,7 @@ const About = ({ aboutMeRef, openInNewTab }: AboutMeProps) => {
           ml="-1.5%"
           pl="50px"
           height={290}
-          src={"/src/assets/images/SKY07623.JPG"}
+          src={"https://i.ibb.co/Kq08sDK/C-C-SKY07623.jpg"}
           className={classes.image}
         />
 

@@ -18,7 +18,7 @@ const mockdata = [
     description:
       "E-commerce app where you can sign-/sign-in with email or google, browse through differnt categories of products to add to cart. Update cart quantity and remove any items before checking out with Stripe",
 
-    image: "/assets/images/day30-cafe.png",
+    image: "https://i.ibb.co/HVnLTCB/day30-cafe.png",
     sourceCode: "https://github.com/acobbina717/ShoppingApp",
     liveDemo: "https://lucky-kringle-a2c598.netlify.app/",
   },
@@ -27,7 +27,7 @@ const mockdata = [
     description:
       "They’re popular, but they’re rare. Trainers who show them off recklessly may be targeted by thieves",
 
-    image: "/src/assets/images/day9-toolbox.png",
+    image: "https://i.ibb.co/J7h9M8G/day70-designer-fav-tool-wacom.png",
     sourceCode: "https://github.com/acobbina717/iChat-App",
   },
   {
@@ -35,7 +35,7 @@ const mockdata = [
     description:
       "People say it can run at the same speed as lightning striking, Its icy body is so cold, it will not melt even if it is immersed in magma",
 
-    image: "/src/assets/images/day70-designer-fav-tool-wacom.png",
+    image: "https://i.ibb.co/ZmTFgVh/day9-toolbox.png",
   },
 ];
 
