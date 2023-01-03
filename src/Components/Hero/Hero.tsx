@@ -64,7 +64,7 @@ const Hero = ({ scrollAboutMeIntoView, scrollProjectsIntoView }: HeroProps) => {
                 size="lg"
                 onClick={() => scrollProjectsIntoView()}
               >
-                View Porjects
+                View Projects
               </Button>
             </div>
           </div>

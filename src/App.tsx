@@ -15,9 +15,6 @@ function App() {
   const { targetRef: projectRef, scrollIntoView: scrollProjectsIntoView } =
     scrollToProjects();
 
-  const openInNewTab = (url: string) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
   return (
     <MantineProvider
       theme={{ colorScheme: "dark" }}
@@ -28,10 +25,10 @@ function App() {
         scrollAboutMeIntoView={scrollAboutMeIntoView}
         scrollProjectsIntoView={scrollProjectsIntoView}
       />
-      <About aboutMeRef={aboutMeRef} openInNewTab={openInNewTab} />
-      <Projects projectRef={projectRef} openInNewTab={openInNewTab} />
+      <About aboutMeRef={aboutMeRef} />
+      <Projects projectRef={projectRef} />
       <Contact />
-      <Footer openInNewTab={openInNewTab} />
+      <Footer />
     </MantineProvider>
   );
 }

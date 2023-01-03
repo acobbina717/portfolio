@@ -1,13 +1,13 @@
 import { Container, Group, ActionIcon } from "@mantine/core";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons";
+
+import { openInNewTab } from "../../hooks/hooks";
+
 import { useStyles } from "./footer.styles";
 
-interface FooterProps {
-  openInNewTab: (url: string) => void;
-}
-
-const Footer = ({ openInNewTab }: FooterProps) => {
+const Footer = () => {
   const { classes } = useStyles();
+
   return (
     <div className={classes.footer}>
       <Container className={classes.inner}>

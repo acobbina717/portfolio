@@ -3,14 +3,13 @@ import { MutableRefObject } from "react";
 
 import { useStyles } from "./about.styles";
 
-import { Link } from "react-router-dom";
+import { openInNewTab } from "../../hooks/hooks";
 
 interface AboutMeProps {
   aboutMeRef?: MutableRefObject<HTMLDivElement>;
-  openInNewTab: (url: string) => void;
 }
 
-const About = ({ aboutMeRef, openInNewTab }: AboutMeProps) => {
+const About = ({ aboutMeRef }: AboutMeProps) => {
   const { classes } = useStyles();
 
   return (
