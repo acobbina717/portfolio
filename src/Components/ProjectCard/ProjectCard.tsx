@@ -21,15 +21,15 @@ interface PreojectCardProps {
 
 const ProjectCard = ({ openInNewTab, project }: PreojectCardProps) => {
   const { classes, cx } = useStyles();
-  const { hovered, ref } = useHover();
+  // const { hovered, ref } = useHover();
 
-  const [visible, setVisible] = useState(hovered);
+  // const [visible, setVisible] = useState(hovered);
 
-  useEffect(() => {
-    setVisible(hovered);
-  }, [hovered]);
+  // useEffect(() => {
+  //   setVisible(hovered);
+  // }, [hovered]);
 
-  console.log(visible);
+  // console.log(visible);
 
   return (
     <Card
@@ -42,12 +42,12 @@ const ProjectCard = ({ openInNewTab, project }: PreojectCardProps) => {
       <Text size="lg" weight={500} className={classes.cardTitle} mt="md">
         {project.title}
       </Text>
-      {project.image ? (
+      {/* {project.image ? (
         <Fragment>
           {visible && <Overlay opacity={0.6} />}
           <Image ref={ref} src={project.image} height={200} />
         </Fragment>
-      ) : null}
+      ) : null} */}
 
       <Text size="sm" color="dimmed" mt="sm">
         {project.description}
