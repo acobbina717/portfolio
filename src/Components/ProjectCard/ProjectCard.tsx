@@ -42,12 +42,11 @@ const ProjectCard = ({ openInNewTab, project }: PreojectCardProps) => {
       <Text size="lg" weight={500} className={classes.cardTitle} mt="md">
         {project.title}
       </Text>
-      {/* {project.image ? (
+      {project.image ? (
         <Fragment>
-          {visible && <Overlay opacity={0.6} />}
-          <Image ref={ref} src={project.image} height={200} />
+          <Image src={project.image} height={200} />
         </Fragment>
-      ) : null} */}
+      ) : null}
 
       <Text size="sm" color="dimmed" mt="sm">
         {project.description}
