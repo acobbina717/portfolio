@@ -5,6 +5,8 @@ import { useStyles } from "./about.styles";
 
 import { openInNewTab } from "../../hooks/hooks";
 
+import Resume from "../../assets/Resume.pdf";
+
 interface AboutMeProps {
   aboutMeRef?: MutableRefObject<HTMLDivElement>;
 }
@@ -51,7 +53,7 @@ const About = ({ aboutMeRef }: AboutMeProps) => {
 
       <div className={classes.controls}>
         <Button
-          onClick={() => openInNewTab("/src/assets/Resume.pdf")}
+          onClick={() => openInNewTab(Resume)}
           size={"md"}
           className={classes.control}
         >
