@@ -52,7 +52,9 @@ const About = ({ aboutMeRef }: AboutMeProps) => {
       <div className={classes.controls}>
         <Button
           onClick={() =>
-            openInNewTab("https://publuu.com/flip-book/64296/187089")
+            openInNewTab(
+              "/public/Abeku+Cobbina+Full-stack+Software+Engineer.pdf"
+            )
           }
           size={"md"}
           className={classes.control}
