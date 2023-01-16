@@ -51,11 +51,7 @@ const About = ({ aboutMeRef }: AboutMeProps) => {
 
       <div className={classes.controls}>
         <Button
-          onClick={() =>
-            openInNewTab(
-              "/public/Abeku+Cobbina+Full-stack+Software+Engineer.pdf"
-            )
-          }
+          onClick={() => openInNewTab("/src/assets/Resume.pdf")}
           size={"md"}
           className={classes.control}
         >
