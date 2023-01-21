@@ -8,11 +8,11 @@ import { openInNewTab } from "../../hooks/hooks";
 
 import { useStyles } from "./projects.styles";
 
-interface PreojectProps {
+interface ProjectProps {
   projectRef?: MutableRefObject<HTMLDivElement>;
 }
 
-const Projects = ({ projectRef }: PreojectProps) => {
+const Projects = ({ projectRef }: ProjectProps) => {
   const { classes } = useStyles();
 
   return (

@@ -14,12 +14,12 @@ export interface Project {
   liveDemo?: string;
 }
 
-interface PreojectCardProps {
+interface ProjectCardProps {
   openInNewTab: (url: string) => void;
   project: Project;
 }
 
-const ProjectCard = ({ openInNewTab, project }: PreojectCardProps) => {
+const ProjectCard = ({ openInNewTab, project }: ProjectCardProps) => {
   const { classes, cx } = useStyles();
   // const { hovered, ref } = useHover();
 

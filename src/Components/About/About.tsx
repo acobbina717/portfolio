@@ -42,9 +42,9 @@ const About = ({ aboutMeRef }: AboutMeProps) => {
               services and that idea lead me down the rabbit-hole of Web
               Development. YouTube and Udemy started to consume most of my days.
               Theres so many technologies to cover. After learning a few
-              technologies like HTML, CSS, Javascriprt on my own, I attened and
+              technologies like HTML, CSS, JavaScript on my own, I attended and
               graduated from Flatiron School. Ever since graduation I've
-              continued to learn new technologies and stregthen my development
+              continued to learn new technologies and strengthen my development
               skills.
             </Text>
           </ScrollArea>
